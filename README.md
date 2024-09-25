@@ -11,20 +11,6 @@ source env_RVL_CDIP/bin/activate
 
 pip install -r requirements.txt
 
-Description des imports
-------------
-pandas numpy
-
-scikit-learn
-
-matplotlib
-
-seaborn
-
-opencv-python
-
-tesseract-ocr
-
 
 Project Organization
 ------------
