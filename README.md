@@ -156,7 +156,6 @@ ___________________
 STRATEGY INFORMATION
 ___________________
 
-Introduction
 Dans le cadre de notre projet de classification de documents sur le dataset RVL-CDIP, nous avons conçu un modèle multimodal combinant deux architectures puissantes : un réseau de neurones convolutionnel (CNN) pour traiter les images, et un modèle BERT (Bidirectional Encoder Representations from Transformers) pour la classification des séquences textuelles. L'objectif de ce modèle est d'exploiter simultanément les informations visuelles et textuelles présentes dans les documents afin d'améliorer les performances de classification. Cette approche est particulièrement pertinente pour des données riches en contenu, comme les documents numérisés, qui combinent souvent des images (mises en page, diagrammes, etc.) et du texte.
 1. Motivation pour un modèle multimodal
 Dans les tâches de classification de documents, les images et le texte fournissent des indices complémentaires. Les approches classiques de classification basées uniquement sur les images ou uniquement sur le texte peuvent ne pas capturer toute la complexité du document. En combinant un modèle CNN pour analyser la structure visuelle des documents et un modèle BERT pour extraire les caractéristiques textuelles, nous exploitons les deux sources d'information de manière synergique.
@@ -177,9 +176,13 @@ ___________________
 FINAL RESULTS
 ___________________
 
-![image](https://github.com/user-attachments/assets/c216a6cb-329e-423f-9b5b-2f14654c5470)
-![image](https://github.com/user-attachments/assets/bb5cfeb3-2420-4efe-8ea7-43fef9d070e8)
-![image](https://github.com/user-attachments/assets/1222bae6-802e-4f04-8743-6479e2f59982)
+Test Loss: 0.45, Test Accuracy: 89,32%
+
+![image](https://github.com/user-attachments/assets/7b65f193-9f8a-432f-b1d5-92760a7a821b)
+![image](https://github.com/user-attachments/assets/9b4575b7-237c-4baa-9681-250dea0f31d0)
+![image](https://github.com/user-attachments/assets/2c452a66-712f-4cfd-8f53-7a18087577df)
+
+
 
 Notre projet visait à créer un modèle multimodal combinant un CNN pour les images et un modèle BERT pour les textes afin de classifier les documents du dataset RVL-CDIP. Après l’entraînement et l’évaluation du modèle, nous avons obtenu des résultats globalement très satisfaisants, mais quelques points de réflexion et d’amélioration ont émergé.
 
