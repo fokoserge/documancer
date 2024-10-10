@@ -1,53 +1,11 @@
+modélisation de catégorisation sur RVL_CDIP
+
 jul24_bds_classif_docs
-modélisation de catégorisation sur DST_RVL_CDIP
+
+DocuMancer
 ==============================
 
-installation du projet
-------------
-
-python3 -m venv env_RVL_CDIP
-
-source env_RVL_CDIP/bin/activate
-
-pip install -r requirements.txt
-
-
-Project Organization
-------------
-
-    ├── LICENSE
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data               <- Should be in your computer but not on Github (only in .gitignore)
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's name, and a short `-` delimited description, e.g.
-    │                         `1.0-alban-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, links, and all other explanatory materials.
-    │
-    ├── reports            <- The reports that you'll make during this project as PDF
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   ├── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │   │   └── visualize.py
+![Documancer](https://github.com/user-attachments/assets/a63fed46-26eb-4792-a3c8-3935ceee48c2)
 
 Description des datas
 ------------
@@ -180,7 +138,7 @@ ___________________
 FINAL RESULTS
 ___________________
 
-Test Loss: 0.45, Test Accuracy: 89,32%
+Test Loss: 0.45, Test Accuracy: 89,68%
 
 ![image](https://github.com/user-attachments/assets/7b65f193-9f8a-432f-b1d5-92760a7a821b)
 ![image](https://github.com/user-attachments/assets/9b4575b7-237c-4baa-9681-250dea0f31d0)
@@ -192,8 +150,11 @@ Notre projet visait à créer un modèle multimodal combinant un CNN pour les im
 
 1. Performance globale du modèle
    
-Les résultats obtenus, avec une précision de  89,32% et un F1-score global similaire, montrent que notre modèle multimodal est performant pour la classification de documents complexes combinant texte et images. La complémentarité entre le traitement des images par CNN et l’analyse textuelle par BERT a permis de capturer des caractéristiques essentielles dans les documents.
+Les résultats obtenus, avec une précision de  89,68% et un F1-score global similaire, montrent que notre modèle multimodal est performant pour la classification de documents complexes combinant texte et images. La complémentarité entre le traitement des images par CNN et l’analyse textuelle par BERT a permis de capturer des caractéristiques essentielles dans les documents.
 
+Notre classement sur HuggingFace :
+
+![Real_DocuMancer_parameters (1)](https://github.com/user-attachments/assets/1931919f-7ff3-400c-8db4-8bdc30b25462)
 
 
 
