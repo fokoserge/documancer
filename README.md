@@ -119,6 +119,7 @@ Dans le cadre de notre projet de classification de documents sur le dataset RVL-
    
 Dans les tâches de classification de documents, les images et le texte fournissent des indices complémentaires. Les approches classiques de classification basées uniquement sur les images ou uniquement sur le texte peuvent ne pas capturer toute la complexité du document. En combinant un modèle CNN pour analyser la structure visuelle des documents et un modèle BERT pour extraire les caractéristiques textuelles, nous exploitons les deux sources d'information de manière synergique.
 Le CNN est capable de capter des motifs visuels (comme la disposition des textes, les formes des caractères, les graphiques, etc.), tandis que BERT excelle dans la compréhension sémantique du texte. Cette complémentarité rend notre modèle plus robuste pour des tâches de classification complexes telles que celles rencontrées avec le dataset RVL-CDIP.
+
 3. Description du modèle
 Notre approche repose sur l'assemblage de deux sous-modèles indépendants : un CNN et un modèle BERT, tous deux pré-entraînés.
 a. Modèle CNN
