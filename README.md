@@ -120,15 +120,15 @@ Dans le cadre de notre projet de classification de documents sur le dataset RVL-
 Dans les tâches de classification de documents, les images et le texte fournissent des indices complémentaires. Les approches classiques de classification basées uniquement sur les images ou uniquement sur le texte peuvent ne pas capturer toute la complexité du document. En combinant un modèle CNN pour analyser la structure visuelle des documents et un modèle BERT pour extraire les caractéristiques textuelles, nous exploitons les deux sources d'information de manière synergique.
 Le CNN est capable de capter des motifs visuels (comme la disposition des textes, les formes des caractères, les graphiques, etc.), tandis que BERT excelle dans la compréhension sémantique du texte. Cette complémentarité rend notre modèle plus robuste pour des tâches de classification complexes telles que celles rencontrées avec le dataset RVL-CDIP.
 
-3. Description du modèle
-Notre approche repose sur l'assemblage de deux sous-modèles indépendants : un CNN et un modèle BERT, tous deux pré-entraînés.
+2. Description du modèle Multimodal 
+Notre approche repose sur l'assemblage de deux sous-modèles indépendants : un modèle CNN et un modèle BERT, tous deux pré-entraînés.
 a. Modèle CNN
 
 Nous avons d'abord chargé un modèle CNN déjà pré-entraîné sur des images de documents. Le CNN est utilisé pour extraire des caractéristiques visuelles des images des documents. Une couche dense en sortie du CNN génère des vecteurs de caractéristiques, que nous avons retenus pour capturer des informations visuelles essentielles à la classification.
 b. Modèle BERT
 
 Nous avons ensuite utilisé un modèle BERT pré-entraîné pour classifier les séquences textuelles présentes dans les documents. La structure de BERT, basée sur des Transformers, nous permet de capturer le contexte et les relations complexes entre les mots, ce qui est crucial pour des documents dont le texte peut être ambigu ou varier en longueur. En gelant les poids du modèle BERT, nous nous sommes assurés que seules les couches finales de classification seraient entraînées, tout en conservant la richesse des représentations textuelles générées par BERT.
-c. Extraction et combinaison des caractéristiques
+c. Caractéristiques en entré du modèle Multimodal
 
 Une fois les deux sous-modèles chargés, nous avons extrait les caractéristiques des images via le CNN et les logits (scores bruts avant la couche de classification) du modèle BERT pour le texte. Ces deux ensembles de caractéristiques, visuelles et textuelles, ont été combinés grâce à une couche de concaténation. Cela nous a permis de fusionner efficacement les informations issues des deux modalités (texte et image).
 La combinaison des caractéristiques permet de capturer à la fois l’information visuelle de la mise en page et le contenu textuel des documents, renforçant ainsi la capacité de notre modèle à différencier les classes.
